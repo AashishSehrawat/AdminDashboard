@@ -1,9 +1,11 @@
 import React from 'react'
+import AdminSidebar from '../components/AdminSidebar'
 
 const Products = () => {
   return (
-    <div>
-      Product
+    <div className='adminContainer'>
+      <AdminSidebar />
+      <main>product</main>
     </div>
   )
 }
