@@ -19,6 +19,7 @@
         background-color: white;
         @include flex(row, space-between, center, 1rem);
         
+        // bar section
         > .barSearch {
             width: 95%;
             @include flex(row, none, center, .5rem);
@@ -42,6 +43,121 @@
             @include flex(row, space-between, center, 0);
             > a {
                 padding-top: 10px;
+            }
+        }
+    }
+
+    // widget section
+    > .widgetSectionDashboard{
+        width: 100%;
+        padding: 2rem 0;
+        @include flex(row, space-between, none, 0);
+        > .widgetBlock{
+            background-color: white;
+            padding: 20px;
+            width: fit-content;
+            border-radius: 4px;
+            box-shadow: 0 0 10px rgba(177, 177, 177, 0.3);
+            @include flex(row, none, none, 0.7rem);
+            > .widgetInfo{
+                > p{
+                    color: rgb(147, 147, 147);
+                    font-weight: 700;
+                }
+                > h4{
+                    font-size: 25px;
+                }
+                >div {
+                    > span{
+                        @include flex(row, none, center, .3rem)
+                    }
+                    > .greenWidget{
+                        color: green;
+                    }
+                    > .redWidget{
+                        color: red;
+                    }
+                }
+            }
+            > .widgetCircle{
+                position: relative;
+                @include square(5rem);
+                display: grid;
+                place-items: center;
+                border-radius: 50%;
+                background-color: aquamarine;
+                &::before{
+                    position: absolute;
+                    content: "";
+                    @include square(4rem);
+                    background-color: white;
+                    border-radius: 100%;
+                }
+                > span {
+                    position: relative;
+                } 
+            }
+        }
+    }
+
+
+    // Graph section
+    > .graphDashboradSection{
+        @include flex(row, none, none, 1.5rem);
+        padding-bottom: 2rem;
+        > .revenueGraph{
+            background-color: white;
+            border-radius: 8px;
+            width: 100%;
+            padding: 20px;
+            @include flex(column, none, center, 1rem);
+            > h2{
+                color: #939393;
+            }
+            > .revenueChart {
+                width: 100%;
+                > canvas {
+                    width: 100%;
+                }
+            }
+        }
+        > .invoGraph{
+            width: fit-content;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            @include flex(column, center, center, 1.5rem);
+            > h3{
+                color: #939393;
+            }
+            > .invoData {
+                width: 100%;
+                @include flex(column, none, none, .5rem)
+            }
+            > .invoData> .inventoBlock{
+                width: 100%;
+                @include flex(row, start, center, .8rem);
+                > p{
+                    width: 70px;
+                }
+                > span {
+                    font-weight: 700;
+                }
+                > div{
+                    position: relative;
+                    width: 100px;
+                    height: 8px;
+                    background-color: #c4c4c4;
+                    border-radius: 10px;
+                    &::before{
+                        position: absolute;
+                        content: "";
+                        height: 8px;
+                        border-radius: 10px;
+                        width: var(--percent);
+                        background-color: var(--barColor);
+                    }
+                }
             }
         }
     }
