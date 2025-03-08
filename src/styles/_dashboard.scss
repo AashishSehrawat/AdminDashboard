@@ -161,5 +161,37 @@
             }
         }
     }
+
+
+    // transaction section
+    > .transactionDashboardSeciton{
+        @include flex(row, none, none, 1.5rem);
+        padding-bottom: 2rem;
+        height: 25rem;
+        > .genderRatio{
+            width: 100%;
+            max-width: 20rem;
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            position: relative;
+            > h3{
+                color: #939393;
+                text-align: center;
+                padding-bottom: 1rem; 
+            }
+            >p {
+                @include posCenter;
+                font-size: 3rem;
+                color: gray;
+            }
+        }
+        > .topTransaction {
+            width: 75%;
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+        }
+    }
 }
 
