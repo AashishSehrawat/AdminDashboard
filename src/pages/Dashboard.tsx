@@ -5,7 +5,9 @@ import { Link } from "react-router-dom";
 import { HiTrendingDown, HiTrendingUp } from "react-icons/hi";
 import DoughnutChart from "../components/DoughnutChart";
 import Charts from "../components/Charts";
+import data from '../assets/data.json';
 import { BiMaleFemale } from "react-icons/bi";
+import DashboardTable from "../components/DashboardTable";
 
 function Dashboard() {
   // wiget component
@@ -170,12 +172,7 @@ function Dashboard() {
               <BiMaleFemale />
             </p>
           </div>
-          <div className="topTransaction">
-            <h3>TOP TRANSACTION</h3>
-            <div className="transactionTable">
-              
-            </div>
-          </div>
+          <DashboardTable data={data.transaction} />
         </div>
       </main>
     </div>

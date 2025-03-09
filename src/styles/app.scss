@@ -1,5 +1,6 @@
 @import "mixin";
 @import "dashboard";
+@import "products";
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap');
 
@@ -89,3 +90,50 @@ a {
     }
 }
 
+
+.table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td{
+    padding: 8px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+th {
+    font-size: 1.1rem;
+    color: black;
+    padding: 2rem 1rem;
+}
+
+tbody{
+    tr{
+        border-bottom: 1px solid rgb(170, 170, 170);
+    }
+
+    td {
+        padding: 1rem;
+    }
+
+    img {
+        width: 75px;
+
+    }
+
+    a{
+        background-color: #0095ff;
+        color: white;
+        padding: 6px 12px;
+        border-radius: 8px;
+        &:hover{
+            background-color: black;
+        }
+        transition: all .3s;
+    }
+
+    tr:last-child{
+        border: none;
+    }
+}

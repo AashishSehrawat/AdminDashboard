@@ -1,0 +1,59 @@
+.product{
+    overflow-y: auto;
+    overflow-x: hidden;
+    min-height: 100vh;
+    padding: 0px 15px;
+    padding-top: 1rem;
+    background-color: white;
+
+    > .productBox {
+        h3 {
+            font-size: 2rem;
+        }
+        th {
+            color: #939393;
+        }
+        > .paginationButtons{
+            text-align: center;
+            padding: 1rem 0;
+            > button {
+                background-color: #0095ff;
+                color: white;
+                border: none;
+                outline: none;
+                font-size: 1.1rem;
+                padding: 4px 8px;
+                border-radius: 4px;
+                cursor: pointer;
+                &:hover{
+                    background-color: #0083e1;
+                }
+                &:disabled {
+                    background-color: black;
+                    cursor: not-allowed;
+                }
+                transition: all .3s;
+            }
+            > .paginationPrev {
+                margin-right: 10px;
+            }
+
+            > .paginationNext {
+                margin-left: 10px;
+            }
+        }
+    }
+
+    > a{
+        position: fixed;
+        top: 2rem;
+        right: 2rem;
+        color: white;
+        font-size: 1.2rem;
+        @include square(2.5rem);
+        @include flex();
+        background-color: #0095ff;
+        border-radius: 50%;
+    }
+   
+}
