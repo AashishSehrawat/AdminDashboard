@@ -106,5 +106,57 @@
         color: #939393;
         font-size: 2rem;
     }
-
+}
+.transactionManagement{
+    overflow-y: auto;
+    overflow-x: hidden;
+    min-height: 100vh;
+    @include flex();
+    > section, >article {
+        background-color: white;
+        padding: 0 1.5rem;
+        min-height: 85vh;
+        width: fit-content;
+        box-shadow: 0px 5px 5px rgba(176, 176, 176, 0.3);
+        border-radius: 8px;
+        @include flex(column, none, none, 1.5rem);
+        > h2{
+            color: #939393;
+            font-size: 2rem; 
+            padding-top: 1rem;
+        }
+    }
+    > article{
+        width: 300px;
+        > div{
+            @include flex(column, none, none, .7rem);
+        }
+        .userOrderInfo, .amountOrderInfo, .statusOrderInfo{
+            h4{
+                font-size: 1.1rem;
+            }
+        }
+        button {
+            padding: 12px 24px;
+            border: none;
+            background-color: #0095ff;
+            color: white;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            &:hover{
+                background-color: black;
+            }
+            transition: all .3s;
+        }
+    }
+  
+}
+.transaction-product-cart{
+    @include flex(row, unset, center, 1rem);
+    > img{
+        @include square(4rem);
+        object-fit: cover;
+        border-radius: 8px;
+    }
 }
