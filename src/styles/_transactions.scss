@@ -1,0 +1,30 @@
+.transaction {
+    overflow-y: auto;
+    overflow-x: hidden;
+    min-height: 100vh;
+    padding: 0px 15px;
+    padding-top: 1rem;
+    background-color: white;
+
+    > .transactionBox{
+        h3 {
+            font-size: 2rem;
+        }
+        th {
+            color: #939393;
+        }
+        td > span{}
+    }
+    > a{
+        position: fixed;
+        top: 2rem;
+        right: 2rem;
+        color: white;
+        font-size: 1.2rem;
+        @include square(2.5rem);
+        @include flex();
+        background-color: #0095ff;
+        border-radius: 50%;
+    }
+    
+}

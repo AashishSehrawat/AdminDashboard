@@ -1,6 +1,8 @@
 @import "mixin";
 @import "dashboard";
 @import "products";
+@import "customers";
+@import "transactions";
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap');
 
@@ -18,6 +20,18 @@
 
 a {
     text-decoration: none;
+}
+
+.red {
+    color: red;
+}
+
+.purple {
+    color: purple;
+}
+
+.green {
+    color: rgb(0, 186, 0)
 }
 
 .adminContainer {
@@ -135,5 +149,35 @@ tbody{
 
     tr:last-child{
         border: none;
+    }
+}
+
+.paginationButtons{
+    text-align: center;
+    padding: 1rem 0;
+    > button {
+        background-color: #0095ff;
+        color: white;
+        border: none;
+        outline: none;
+        font-size: 1.1rem;
+        padding: 4px 8px;
+        border-radius: 4px;
+        cursor: pointer;
+        &:hover{
+            background-color: #0083e1;
+        }
+        &:disabled {
+            background-color: black;
+            cursor: not-allowed;
+        }
+        transition: all .3s;
+    }
+    > .paginationPrev {
+        margin-right: 10px;
+    }
+
+    > .paginationNext {
+        margin-left: 10px;
     }
 }
