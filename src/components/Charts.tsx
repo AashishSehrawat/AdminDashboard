@@ -1,4 +1,3 @@
-import React from "react";
 import { Bar } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -89,7 +88,7 @@ const Charts = ({
     },
   };
 
-  return <Bar data={data} options={options} />;
+  return <Bar width={horizontal? "200%" : ""}  data={data} options={options} />;
 };
 
 export default Charts;
