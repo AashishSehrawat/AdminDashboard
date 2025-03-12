@@ -1,0 +1,122 @@
+.appContainer {
+    overflow-y: auto;
+    overflow-x: hidden;
+    min-height: 100vh;
+    padding: 0px 15px;
+    padding-top: 1rem;
+    background-color: white;
+    @include flex(column, none, none, 1.5rem);
+    > h1{
+        color: #939393;
+    }
+    section {
+        @include flex(row, center, unset, 0);
+    }
+}
+
+.stopwatch{
+    padding-top: 13rem;
+    @include flex(column, none, none, 1rem);
+    h2 {
+        font-size: 2rem;
+        text-align: center
+    }
+    > div{
+        @include flex();
+        button {
+            width: 100px;
+            background-color: #0095ff;
+            color: white;
+            padding: 4px 8px;
+            border: none;
+            font-size: 1.1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all .3s;
+            &:hover{
+                background-color: black;
+            }
+        }
+    }
+}
+
+.tossCoin {
+    padding-top: 10rem;
+    @include square(12rem);
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all .5s;
+    > div{
+        border-radius: 50%;
+        @include square(100%);
+        position: absolute;
+        display: grid;
+        place-items: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        backface-visibility: hidden;
+        cursor: pointer;
+        &:first-of-type{
+            background-image: url("../assets/tails.png");
+        }
+        &:last-of-type{
+            background-image: url("../assets/heads.png");
+            transform: rotateY(-180deg);
+        }
+    }
+}
+
+.couponForm {
+    @include flex(column, center, center, 2.5rem);
+    padding-top: 7rem;
+    > .textForm {
+        @include flex(row, unset, unset, 2rem);
+        input {
+            padding: 8px 16px;
+            font-size: 1rem;
+            outline: none;
+            border-radius: 4px;
+            border: 1px solid rgb(191, 191, 191);
+            &:last-of-type{
+                width: 100px;
+            }
+        }
+    }
+
+    > .checkboxForm{
+        width: 100%;
+        @include flex(row, space-around, center, 0);
+        border: 1px solid rgb(191, 191, 191);
+        padding: 8px 16px;
+        border-radius: 4px;
+        > div{
+            @include flex(row, center, center, .2rem);
+            > input {
+                cursor: pointer;
+                width: 1.05rem;
+            }
+        }
+    }
+
+    button {
+        background-color: #0095ff;
+        border-radius: 8px;
+        padding: 12px 24px;
+        border: none;
+        color: white;
+        width: 100%;
+        cursor: pointer;
+        transition: all .3s;
+        &:hover{
+            background-color: black;
+        }
+    }
+
+    > input {
+        outline: none;
+        border: 1px solid rgb(191, 191, 191);
+        text-align: center;
+        padding: 8px 16px;
+        border-radius: 4px;
+    }
+}
